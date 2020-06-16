@@ -1,0 +1,5 @@
+CDN_CHAMP_INFO: link + tên tướng.json
+CDN_CHAMP_SKIN: link + tên tướng_(num trong skins của champ_info trên).jpg
+CDN_CHAMP_AVATAR: link + tên tướng.png
+CDN_CHAMP_PASSIVE: link + (full trong image passive tướng)
+CDN_CHAMP_SPELL: link + (full trong image spells(4 chiêu))

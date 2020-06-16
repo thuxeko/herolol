@@ -1,7 +1,4 @@
 {
-    "API_SERVER": {
-        "API_URL": "localhost"
-    },
     "CDN_CHAMP": {
         "CDN_CHAMP_URL": "http://ddragon.leagueoflegends.com/cdn/10.10.3216176/data/vn_VN/champion.json",
         "CDN_CHAMP_INFO": "http://ddragon.leagueoflegends.com/cdn/10.10.3216176/data/vn_VN/champion/",
