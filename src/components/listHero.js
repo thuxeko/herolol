@@ -1,33 +1,27 @@
 import React, { Component } from 'react';
 import cdnPath from '../components/data/pathCDN.json';
+import champion from '../components/data/champion.json';
 import axios from 'axios';
 import Avatar from '@material-ui/core/Avatar';
+import Grid from '@material-ui/core/Grid';
+
+const lstHeros = Object.entries(champion.data);
 
 class ListHero extends Component {
-    state = {
-        lstHeros: []
-    };
-    componentDidMount() {
-        axios.get(cdnPath.CDN_CHAMP.CDN_CHAMP_URL)
-            .then(res => {
-                const lstHeros = Object.entries(res.data.data);
-                this.setState({ lstHeros });
-            })
-            .catch(error => console.log(error));
-    }
-
     render() {
         return (
-            <div>
+            <Grid container direction="row" justify="center" alignItems="center" spacing={1}>
                 {
-                    this.state.lstHeros
+                    lstHeros
                         .map(ht =>
                             <>
-                                <Avatar alt={ht[1].name} src={cdnPath.CDN_CHAMP.CDN_CHAMP_AVATAR + ht[1].image.full} />
-                                <span>{ht[1].name}</span>
+                                <Grid item sm={1}>
+                                    <Avatar src={cdnPath.CDN_CHAMP.CDN_CHAMP_AVATAR + ht[1].image.full} alt={ht[1].name}></Avatar>
+                                    {/* <span>{ht[1].name}</span> */}
+                                </Grid>
                             </>)
                 }
-            </div>
+            </Grid>
         );
     };
 }
